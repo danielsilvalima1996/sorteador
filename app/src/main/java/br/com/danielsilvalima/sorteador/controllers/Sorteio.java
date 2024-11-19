@@ -26,8 +26,8 @@ public class Sorteio extends Fragment {
     private static final String PREFS_NAME = "TimesPrefs";
     private static final String KEY_TIMES = "times";
 
-    private List<String> timesList;
-    private List<String> timesSorteadosList;
+    private List<String> timesList = new ArrayList<>();
+    private List<String> timesSorteadosList = new ArrayList<>();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedIntanceState) {
@@ -37,23 +37,30 @@ public class Sorteio extends Fragment {
 
         TextView txtSortear = view.findViewById(R.id.txtSortear);
 
+        timesList = carregarTimes();
         btnSorteio.setOnClickListener(v -> {
-            timesList = carregarTimes();
             if(timesSorteadosList.size() == timesList.size()) {
                 timesSorteadosList = new ArrayList<>();
             }
-            int indexTimeA = numeroAleatorio(timesList.size() - (1 + timesSorteadosList.size()));
-            String timeA = timesList.get(indexTimeA);
-            timesSorteadosList.add(timeA);
-            int indexTimeB = numeroAleatorio(timesList.size() - (1 + timesSorteadosList.size()));
-            String timeB = timesList.get(indexTimeB);
-            timesSorteadosList.add(timeB);
+            if(timesList.size() > 1) {
+                int indexTimeA = numeroAleatorio(timesList.size() - 1);
+                String timeA = timesList.get(indexTimeA);
+                timesSorteadosList.add(timeA);
+                timesList.remove(indexTimeA);
+                int indexTimeB = numeroAleatorio(timesList.size() - 1);
+                String timeB = timesList.get(indexTimeB);
+                timesSorteadosList.add(timeB);
+                timesList.remove(indexTimeB);
 
-            String timesSorteados = String.format("%s x %s", timeA, timeB);
+                String timesSorteados = String.format("%s x %s", timeA, timeB);
 
-            System.out.println(timesSorteados);
+                System.out.println(timesSorteados);
 
-            txtSortear.setText(timesSorteados);
+                txtSortear.setText(timesSorteados);
+            } else {
+                txtSortear.setText(R.string.mensagemErro);
+                timesList = carregarTimes();
+            }
 
         });
 
@@ -68,7 +75,11 @@ public class Sorteio extends Fragment {
 
     private int numeroAleatorio(int total) {
         Random random = new Random();
-        return random.nextInt(total);
+        int numeroAleatorio = 0;
+        if(total != numeroAleatorio) {
+            numeroAleatorio = random.nextInt(total);
+        }
+        return numeroAleatorio;
     }
 
 }

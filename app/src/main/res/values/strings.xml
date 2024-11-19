@@ -10,5 +10,6 @@
     <string name="botaoAdicionarTime">Adicionar Time</string>
     <string name="inputLayoutTime">Adicione um Time:</string>
     <string name="botaoSortear">Sortear</string>
+    <string name="mensagemErro">Não foi possível sortear, tente novamente!</string>
 
 </resources>
