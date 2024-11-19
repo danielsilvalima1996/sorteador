@@ -2,15 +2,13 @@ package br.com.danielsilvalima.sorteador;
 
 import android.os.Bundle;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 import androidx.viewpager2.widget.ViewPager2;
 
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
+
+import br.com.danielsilvalima.sorteador.controllers.TabAdapter;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -34,6 +32,9 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 1:
                     tab.setText(R.string.times);
+                    break;
+                default:
+                    tab.setText("Sortear");
                     break;
             }
         }).attach();

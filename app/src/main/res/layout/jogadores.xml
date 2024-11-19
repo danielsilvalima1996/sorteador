@@ -28,11 +28,10 @@
         android:layout_marginTop="16dp" />
 
     <!-- Lista de jogadores -->
-    <TextView
-        android:id="@+id/txtJogadores"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerJogadores"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/jogadoresAdicionados"
-        android:textSize="16sp"
-        android:layout_marginTop="16dp" />
+        android:layout_height="match_parent"
+        android:layout_marginTop="16dp"
+        android:scrollbars="vertical" />
 </LinearLayout>

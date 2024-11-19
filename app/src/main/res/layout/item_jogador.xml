@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <!-- Nome do jogador -->
+    <TextView
+        android:id="@+id/txtNomeJogador"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="@string/nomeJogador"
+        android:textSize="16sp" />
+
+    <!-- Botão de remover -->
+    <Button
+        android:id="@+id/btnRemoverJogador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btnRemover"
+        android:layout_marginStart="8dp" />
+</LinearLayout>

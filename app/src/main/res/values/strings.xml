@@ -4,5 +4,11 @@
     <string name="times">Times</string>
     <string name="inputLayoutJogador">Adicione um (a) jogador(a):</string>
     <string name="botaoAdicionarJogador">Adicionar Jogador</string>
-    <string name="jogadoresAdicionados">Jogadores adicionados:</string>
+    <string name="nomeJogador">Nome do jogador</string>
+    <string name="btnRemover">Remover</string>
+    <string name="nomeTime">Nome time</string>
+    <string name="botaoAdicionarTime">Adicionar Time</string>
+    <string name="inputLayoutTime">Adicione um Time:</string>
+    <string name="botaoSortear">Sortear</string>
+
 </resources>
