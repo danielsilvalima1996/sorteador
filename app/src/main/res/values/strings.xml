@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Sorteador</string>
+    <string name="jogadores">Jogadores</string>
+    <string name="times">Times</string>
+    <string name="inputLayoutJogador">Adicione um (a) jogador(a):</string>
+    <string name="botaoAdicionarJogador">Adicionar Jogador</string>
+    <string name="jogadoresAdicionados">Jogadores adicionados:</string>
+</resources>
