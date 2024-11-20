@@ -9,7 +9,10 @@
     <string name="nomeTime">Nome time</string>
     <string name="botaoAdicionarTime">Adicionar Time</string>
     <string name="inputLayoutTime">Adicione um Time:</string>
-    <string name="botaoSortear">Sortear</string>
-    <string name="mensagemErro">Não foi possível sortear, tente novamente!</string>
+    <string name="botaoEscolherTimes">Escolher times!</string>
+    <string name="quantidadeImpar">Não é possível sortear com a quantidade %d, pois o valor é impar.</string>
+    <string name="a_lista_zerou">A lista zerou.</string>
+    <string name="time_x_time">%s \nX\n%s</string>
+    <string name="quantidade_de_times">Quantidade de times %d</string>
 
 </resources>

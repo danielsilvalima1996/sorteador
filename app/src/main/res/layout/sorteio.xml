@@ -6,19 +6,20 @@
     android:gravity="center"
     android:padding="16dp">
 
-    <!-- Botão para adicionar o jogador -->
-
     <TextView
         android:id="@+id/txtSortear"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="34sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/btnSortear"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="@string/botaoAdicionarTime" />
+        android:text="@string/botaoEscolherTimes" />
 
 
 </LinearLayout>

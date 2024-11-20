@@ -39,10 +39,13 @@ public class Sorteio extends Fragment {
 
         timesList = carregarTimes();
         btnSorteio.setOnClickListener(v -> {
-            if(timesSorteadosList.size() == timesList.size()) {
+            if(timesList.isEmpty()) {
+                txtSortear.setText(R.string.a_lista_zerou);
                 timesSorteadosList = new ArrayList<>();
-            }
-            if(timesList.size() > 1) {
+                timesList = carregarTimes();
+            } else if(timesList.size() % 2 == 1) {
+                txtSortear.setText(getString(R.string.quantidadeImpar, timesList.size()));
+            } else {
                 int indexTimeA = numeroAleatorio(timesList.size() - 1);
                 String timeA = timesList.get(indexTimeA);
                 timesSorteadosList.add(timeA);
@@ -52,14 +55,7 @@ public class Sorteio extends Fragment {
                 timesSorteadosList.add(timeB);
                 timesList.remove(indexTimeB);
 
-                String timesSorteados = String.format("%s x %s", timeA, timeB);
-
-                System.out.println(timesSorteados);
-
-                txtSortear.setText(timesSorteados);
-            } else {
-                txtSortear.setText(R.string.mensagemErro);
-                timesList = carregarTimes();
+                txtSortear.setText(getString(R.string.time_x_time, timeA, timeB));
             }
 
         });

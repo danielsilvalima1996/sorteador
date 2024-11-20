@@ -27,6 +27,13 @@
         android:text="@string/botaoAdicionarTime"
         android:layout_marginTop="16dp" />
 
+    <TextView
+        android:id="@+id/quantidadeTimes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quantidade_de_times"
+        android:textAlignment="center" />
+
     <!-- Lista de jogadores -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerTimes"
@@ -34,4 +41,5 @@
         android:layout_height="match_parent"
         android:layout_marginTop="16dp"
         android:scrollbars="vertical" />
+
 </LinearLayout>
